@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
   resources :tags, only: [:create, :update, :destroy]
 
-  resources :questions, :only [:index] # ---> IDEALLY THE USER QUESTIONS NEW, EDIT IS DONE IN THE SAME PAGE
-  resources :user_questions, :only [:create, :update]
+  resources :questions, only: [:index] # ---> IDEALLY THE USER QUESTIONS NEW, EDIT IS DONE IN THE SAME PAGE
+  resources :user_questions, only: [:create, :update]
 end
