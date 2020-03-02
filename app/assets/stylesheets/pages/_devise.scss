@@ -2,6 +2,8 @@
   background-color: $primary-color;
   height: 100vh;
   position: relative;
+  background-image: url(background.png);
+  background-repeat: repeat;
 }
 
 .devise-form {

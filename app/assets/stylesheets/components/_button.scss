@@ -14,19 +14,23 @@
   color: white;
 }
 
-
 .btn-ghost {
   color: $primary-color;
+  background-color: white;
   border: 1px $primary-color solid;
   padding: 8px 24px;
   border-radius: 5px;
   font-weight: lighter;
   margin-bottom: 15px;
   margin-top: 15px;
-  opacity: .7;
+  color-opacity: .7;
+  a {
+    color: $primary-color;
+  }
 }
 
 .btn-ghost:hover {
   opacity: 1;
   color: $primary-color;
+  text-decoration: underline;
 }
