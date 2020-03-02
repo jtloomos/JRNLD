@@ -1,1 +1,36 @@
 // Specific CSS for your home-page
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: $primary-color;
+  height: 100vh;
+}
+
+.banner h3, p {
+  text-align: center;
+  color: white;
+}
+
+.banner a {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  &:hover {
+    color: white;
+  }
+}
+
+.banner .btn-white {
+  background-color: white;
+  font-weight: lighter;
+  color: $primary-color;
+  margin: 50px 0px;
+  width: 200px;
+  &:hover {
+    color: $primary-color;
+    font-weight: bolder;
+  }
+}
