@@ -6,5 +6,6 @@ class EntryPolicy < ApplicationPolicy
   end
 
   def show?
+    record
   end
 end
