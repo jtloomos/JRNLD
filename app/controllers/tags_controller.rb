@@ -1,4 +1,4 @@
-class TagController < ApplicationController
+class TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     @tag.user = current_user ### TO BE CONFIRMED WITH PUNDIT SETUP
@@ -9,10 +9,12 @@ class TagController < ApplicationController
     @tag.status = "inactive" ### on click of X, status updated to "inactive"
   end
 
-  def destroy
-    ### I don't think we need this?
-    # @tag = Tag.find(params[:id])
-    # @tag.destroy!
+  def create_entry_tag
+
+  end
+
+  def update_entry_tag
+
   end
 
   private

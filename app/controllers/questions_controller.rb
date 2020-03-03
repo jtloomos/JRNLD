@@ -1,4 +1,4 @@
-class QuestionController < ApplicationController
+class QuestionsController < ApplicationController
   def index
     @questions = Question.all
   end
@@ -9,6 +9,10 @@ class QuestionController < ApplicationController
     @question.user = current_user ## FUTURE PUNDIT
     @question.save!
     ### call NEW/CREATE method for USER_QUESTION
+  end
+
+  def update
+
   end
 
   private

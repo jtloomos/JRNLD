@@ -7,12 +7,10 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: 'contact'
 
   resources :entries do
-    resources :entry_questions, only: [:new, :create, :edit, :update]
-    resources :entry_tags, only: [:create, :update, :destroy]
-  end
-
-  resources :tags, only: [:create, :update, :destroy]
-
-  resources :questions, only: [:index] # ---> IDEALLY THE USER QUESTIONS NEW, EDIT IS DONE IN THE SAME PAGE
-  resources :user_questions, only: [:create, :update]
+    resources :entry_answers, only: [:create, :show]
+    post 'entry_tags', to: 'tags#create_entry_tag', as: 'new_entry_tag'
+    patch 'entry_tags', to: 'tags#update_entry_tag', as: 'edit_entry_tag'
+    # resources :entry_tags, only: [:create, :update]
+  resources :tags, only: [:create, :update]
+  resources :questions, only: [:index, :create, :update] # ---> IDEALLY THE USER QUESTIONS NEW, EDIT IS DONE IN THE SAME PAGE
 end
