@@ -1,2 +1,20 @@
-<h1><%= @entry.user %></h1>
-<h2><%= @entry_answers.first %></h2>
+<div class="container d-flex flex-column justify-content-around h-100">
+  <div class="d-flex align-items-center m-5 p-5">
+    <i class="fas fa-arrow-left m-3"></i>
+    <div id="answer-container">
+      <h1><%= @entry_answers.first.user_question.question.title %></h1>
+    </div>
+    <i class="fas fa-arrow-right m-3"></i>
+  </div>
+  <% other_answers = @entry_answers.delete_at(0) %>
+  <%= other_answers.each do |answer| %>
+    <div class="d-flex align-items-center m-5 p-5">
+      <i class="fas fa-arrow-left m-3"></i>
+      <div id="answer-container">
+        <h1><%= @entry_answers.first.user_question.question.title %></h1>
+      </div>
+    <i class="fas fa-arrow-right m-3"></i>
+  </div>
+  <% end %>
+</div>
+

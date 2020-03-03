@@ -14,7 +14,7 @@ class EntriesController < ApplicationController
     authorize @entry
 
     @entry_answers = current_user.user_questions.map do |question|
-      Entry_answer.new(entry: @entry, user_question: question)
+      EntryAnswer.new(entry: @entry, user_question: question)
     end
   end
 

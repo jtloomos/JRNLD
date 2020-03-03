@@ -9,4 +9,3 @@ class EntryPolicy < ApplicationPolicy
     Entry.find_by("created_at > ?",  1.day.ago).nil?
   end
 end
-end
