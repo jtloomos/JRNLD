@@ -11,6 +11,7 @@ require 'faker'
 User.destroy_all
 Topic.destroy_all
 Question.destroy_all
+UserQuestion.destroy_all
 
 ################ USER SEED ################
 
@@ -78,4 +79,46 @@ question_seed = [
 
 question_seed.each do |question|
   Question.create!(question)
+end
+
+################ USER QUESTION SEED ################
+
+user_question_seed = [
+  { user: User.second,
+    question_id: 1,
+    frequency: "daily" },
+  { user: User.second,
+    question_id: 3,
+    frequency: "weekly" },
+    { user: User.second,
+    question_id: 4,
+    frequency: "daily" },
+  { user: User.second,
+    question_id: 5,
+    frequency: "monthly" },
+  { user: User.second,
+    question_id: 7,
+    frequency: "daily" },
+  { user: User.second,
+    question_id: 8,
+    frequency: "daily" },
+  { user: User.third,
+    question_id: 2,
+    frequency: "weekly" },
+  { user: User.third,
+    question_id: 3,
+    frequency: "monthly" },
+  { user: User.third,
+    question_id: 4,
+    frequency: "daily" },
+  { user: User.third,
+    question_id: 6,
+    frequency: "daily" },
+  { user: User.third,
+    question_id: 8,
+    frequency: "weekly" },
+]
+
+user_question_seed.each do |user_question|
+  UserQuestion.create!(user_question)
 end

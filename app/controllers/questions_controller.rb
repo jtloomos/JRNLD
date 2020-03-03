@@ -1,6 +1,14 @@
 class QuestionsController < ApplicationController
+
+  skip_after_action :verify_policy_scoped, only: :index
+
   def index
-    @questions = Question.all
+    @user_questions = current_user.user_questions
+    @questions = []
+    @user_questions.each do |user_question|
+      @questions << Question.find(user_question.question_id)
+    end
+    # will need to also display all public questions matching selected TOPICS
   end
 
   def create
@@ -12,7 +20,12 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    ## THIS ONE IS FOR UPDATING USER_QUESTIONS.
+    @question = Question.find(params[:id])
+    authorize @question
+    @user_question = UserQuestion.find(@question.id)
+    if params[:status].present?
+      @user_question.update(status: !@user_question.status)
+    end
   end
 
   private

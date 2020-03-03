@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_184525) do
+ActiveRecord::Schema.define(version: 2020_03_03_201050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,10 +61,10 @@ ActiveRecord::Schema.define(version: 2020_03_03_184525) do
   end
 
   create_table "user_questions", force: :cascade do |t|
-    t.string "status"
     t.string "frequency"
     t.bigint "user_id"
     t.bigint "question_id"
+    t.boolean "status", default: true
     t.index ["question_id"], name: "index_user_questions_on_question_id"
     t.index ["user_id"], name: "index_user_questions_on_user_id"
   end
