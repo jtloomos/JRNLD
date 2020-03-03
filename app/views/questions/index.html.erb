@@ -1,0 +1,26 @@
+<!-- Page for user to VIEW active questions, -->
+<!-- ACTIVATE additional stock questions or previous custom questions, -->
+<!-- DEACTIVATE any active questions, -->
+<!-- EDIT frequency of any active questions, -->
+<!-- ADD new custom questions (specifying title and frequency) -->
+
+
+<!-- Show list of all active questions for a user -->
+<!-- Upon load, add class: active for active questions -->
+<!-- Row click event toggles class=active and also toggles status=active for the question -->
+<!-- Click ... button allows editing question frequency -->
+
+<!-- First row of the list will be a text input to create a new question -->
+<!-- Click + will request frequency to be specified, then question is saved -->
+
+
+<div class="container h-100 d-flex justify-content-between">
+  <div class="list-group list-group-flush">
+    <a href="#" class="list-group-item list-group-item-action active">Click a question to toggle it's status (aka UPDATE)</a>
+    <a href="#" class="list-group-item list-group-item-action active">How many glasses of water did you drink today?</a>
+    <a href="#" class="list-group-item list-group-item-action">How did you get to work today?</a>
+    <a href="#" class="list-group-item list-group-item-action active">Did you eat a healthy snack today?</a>
+    <a href="#" class="list-group-item list-group-item-action">How long did you meditate today?</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Did you visit a new place today? (disabled)</a>
+  </div>
+</div>

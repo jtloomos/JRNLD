@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+user_seed = [
+  { email: 'jrnld@jrnld.com',
+    username: 'jrnld',
+    password: 12345678 },
+  { email: 'test@test.com',
+    username: 'test',
+    password: 12345678 }
+]
+
+user_seed.each do |user|
+  @user = User.new(user)
+  @user.save!
+end

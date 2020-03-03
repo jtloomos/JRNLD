@@ -4,7 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :tags, :entries, :user_questions, :questions
+  has_many :tags
+  has_many :entries
+  has_many :user_questions
+  has_many :questions
   has_many :entry_tags, through: :entries
   has_many :topics, through: :questions
 end
