@@ -1,7 +1,9 @@
-class TagController < ApplicationController
+class TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     @tag.user = current_user ### TO BE CONFIRMED WITH PUNDIT SETUP
+
+    #### WE NEED TO CREATE ENTRY TAG HERE AT THE SAME TIME
   end
 
   def update
@@ -10,9 +12,11 @@ class TagController < ApplicationController
   end
 
   def destroy
-    ### I don't think we need this?
-    # @tag = Tag.find(params[:id])
-    # @tag.destroy!
+    ## HERE WE DESTROY ENTRY TAGS (NOT TAGS)
+  end
+
+  def update_entry_tag
+
   end
 
   private
