@@ -8,9 +8,9 @@ Rails.application.routes.draw do
 
   resources :entries do
     resources :entry_answers, only: [:create, :update, :show]
-    post 'entry_tags', to: 'tags#create_entry_tag', as: 'new_entry_tag'
     patch 'entry_tags', to: 'tags#update_entry_tag', as: 'edit_entry_tag'
-    # resources :entry_tags, only: [:create, :update]
-  resources :tags, only: [:create, :update]
+  end
+
+  resources :tags, only: [:create, :update, :destroy]
   resources :questions, only: [:index, :create, :update] # ---> IDEALLY THE USER QUESTIONS NEW, EDIT IS DONE IN THE SAME PAGE
 end

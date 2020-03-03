@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
   end
 
   def update
-
+    ## THIS ONE IS FOR UPDATING USER_QUESTIONS.
   end
 
   private

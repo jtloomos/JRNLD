@@ -2,6 +2,8 @@ class TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     @tag.user = current_user ### TO BE CONFIRMED WITH PUNDIT SETUP
+
+    #### WE NEED TO CREATE ENTRY TAG HERE AT THE SAME TIME
   end
 
   def update
@@ -9,8 +11,8 @@ class TagsController < ApplicationController
     @tag.status = "inactive" ### on click of X, status updated to "inactive"
   end
 
-  def create_entry_tag
-
+  def destroy
+    ## HERE WE DESTROY ENTRY TAGS (NOT TAGS)
   end
 
   def update_entry_tag
