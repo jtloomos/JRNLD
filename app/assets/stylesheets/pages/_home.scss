@@ -15,7 +15,7 @@
 .banner h3 {
   text-align: center;
   color: white;
-  font-weight: bold;
+  font-weight: light;
   margin: 16px 64px;
   line-height: 56px;
   font-size: 48px;
@@ -23,6 +23,7 @@
 
 .banner p {
   color: white;
+  opacity: 0.8;
 }
 
 .banner .log-in a {
@@ -34,7 +35,7 @@
 }
 
 .banner .btn-ghost {
-  margin: 32px 0px;
+  margin: 52px 0px;
 }
 
 
@@ -53,20 +54,23 @@
   width: 70%;
   height: 90%;
   margin: auto;
+  box-shadow: 2px 2px 2px $primary-color;
 }
 
 
 // Features-specific CSS
 .features-section {
   background-color: white;
+  padding-bottom: 30px;
 }
 
 .features-container-header {
-  width: 100%;
+  width: 70%;
   background-color: white;
   text-align: center;
   padding-top: 30px;
   color: $primary-color;
+  margin: auto;
 }
 
 .feature-container {
@@ -107,7 +111,7 @@
   height: 20%;
 }
 
-figure {
+.feature-card figure {
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -120,8 +124,57 @@ figure {
   align-items: center;
 }
 
-figure .fas {
+.feature-card figure .fas {
   font-size: 40px;
+}
+// Benefits-specific CSS
+.benefits-section {
+  background-color: $secondary-color;
+}
+
+.benefits-container-header {
+  width: 100%;
+  background-color: $secondary-color;
+  text-align: left;
+  padding-top: 30px;
+  color: $primary-color;
+  padding-left: 16px;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits-pic-container img {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.benefit-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 24px;
+}
+
+.benefits-list figure {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+  background-color: $secondary-color;
+  border: 1px solid black;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-list .benefit-content {
+  width: 80%;
 }
 
 // Review-specific CSS
@@ -140,7 +193,7 @@ figure .fas {
 .reviews-list {
   display: flex;
   justify-content: space-between;
-  margin: 16px;
+  padding: 16px;
   width: 100%;
 }
 
@@ -166,6 +219,9 @@ figure .fas {
   height: 100%;
   align-content: flex-start;
   width: 100%;
+  p {
+    padding: 0px 16px;
+  }
 }
 
 .review-card .review-content {
