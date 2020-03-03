@@ -1,5 +1,8 @@
-class EntryAnswers < ApplicationController
+class EntryAnswersController < ApplicationController
   def create
+  end
+
+  def update
   end
 
   def show

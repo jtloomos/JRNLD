@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: 'contact'
 
   resources :entries do
-    resources :entry_answers, only: [:create, :show]
+    resources :entry_answers, only: [:create, :update, :show]
     post 'entry_tags', to: 'tags#create_entry_tag', as: 'new_entry_tag'
     patch 'entry_tags', to: 'tags#update_entry_tag', as: 'edit_entry_tag'
     # resources :entry_tags, only: [:create, :update]
