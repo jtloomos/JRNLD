@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_205141) do
+ActiveRecord::Schema.define(version: 2020_03_03_174651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_205141) do
   create_table "entries", force: :cascade do |t|
     t.string "location"
     t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_entries_on_user_id"
   end
 
@@ -27,6 +29,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_205141) do
     t.text "details"
     t.bigint "entry_id"
     t.bigint "user_question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["entry_id"], name: "index_entry_answers_on_entry_id"
     t.index ["user_question_id"], name: "index_entry_answers_on_user_question_id"
   end
@@ -34,6 +38,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_205141) do
   create_table "entry_tags", force: :cascade do |t|
     t.bigint "entry_id"
     t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["entry_id"], name: "index_entry_tags_on_entry_id"
     t.index ["tag_id"], name: "index_entry_tags_on_tag_id"
   end
@@ -45,6 +51,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_205141) do
     t.string "end_label"
     t.bigint "user_id"
     t.bigint "topic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["topic_id"], name: "index_questions_on_topic_id"
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
@@ -53,6 +61,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_205141) do
     t.string "title"
     t.string "status"
     t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tags_on_user_id"
   end
 
@@ -65,6 +75,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_205141) do
     t.string "frequency"
     t.bigint "user_id"
     t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_user_questions_on_question_id"
     t.index ["user_id"], name: "index_user_questions_on_user_id"
   end

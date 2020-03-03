@@ -6,6 +6,8 @@ class EntriesController < ApplicationController
   end
 
   def new
+    @entry = Entry.new(user: current_user)
+    authorize @entry
   end
 
   def create
