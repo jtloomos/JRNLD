@@ -1,4 +1,4 @@
-// Specific CSS for your home-page
+// Banner-specific CSS
 .banner {
   display: flex;
   align-items: center;
@@ -8,8 +8,8 @@
   background-color: $primary-color;
   height: 100vh;
   width: 100%;
-  background-image: url(background.png);
-  background-repeat: repeat;
+  // background-image: url(background.png);
+  // background-repeat: repeat;
 }
 
 .banner h3 {
@@ -17,7 +17,8 @@
   color: white;
   font-weight: bold;
   margin: 16px 64px;
-  line-height: 45px;
+  line-height: 56px;
+  font-size: 48px;
 }
 
 .banner p {
@@ -36,15 +37,8 @@
   margin: 32px 0px;
 }
 
-.information {
-  padding-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: white;
-}
 
+// Video-specific CSS
 .video-container {
   display: flex;
   justify-content: center;
@@ -62,6 +56,7 @@
 }
 
 
+// Features-specific CSS
 .features-section {
   background-color: white;
 }
@@ -71,6 +66,7 @@
   background-color: white;
   text-align: center;
   padding-top: 30px;
+  color: $primary-color;
 }
 
 .feature-container {
@@ -125,5 +121,53 @@ figure {
 }
 
 figure .fas {
-  font-size: 50px;
+  font-size: 40px;
+}
+
+// Review-specific CSS
+.reviews-section {
+  background-color: white;
+}
+
+.reviews-container-header {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding-top: 30px;
+  color: $primary-color;
+}
+
+.reviews-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+  width: 100%;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 16px;
+  width: 100%;
+}
+
+.review-card {
+  background-color: white;
+  opacity: 0.8;
+  border: 1px solid $secondary-color;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 2px 2px 2px $secondary-color;
+  height: 100%;
+  align-content: flex-start;
+  width: 100%;
+}
+
+.review-card .review-content {
+  font-style: italic;
 }
