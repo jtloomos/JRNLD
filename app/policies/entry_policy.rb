@@ -6,6 +6,6 @@ class EntryPolicy < ApplicationPolicy
   end
 
   def new?
-    Entry.find_b()
+    Entry.find_by("created_at > ?",  1.day.ago).nil?
   end
 end
