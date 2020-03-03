@@ -14,8 +14,27 @@
 <!-- Click + will request frequency to be specified, then question is saved -->
 
 
+<div class="container h-100 justify-content-between">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" id="user-question-0">
+    <div class="d-flex w-100 justify-content-between">
+      <p class="mb-1">Click a question to toggle it's status (aka UPDATE)</p>
+      <button type="button" class="btn btn-info">Info</button>
+    </div>
+  </a>
+
+  <% @questions.each do |question| %>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" id="user-question-<%= question.id %>">
+        <div class="d-flex w-100 justify-content-between">
+          <p class="mb-1"><%= question.title %>?</p>
+          <button type="button" class="btn btn-info">Info</button>
+        </div>
+      </a>
+  <% end %>
+</div>
+
+<!--
 <div class="container h-100 d-flex justify-content-between">
-  <div class="list-group list-group-flush">
+  <div class="list-group list-group-flush flex-column">
     <a href="#" class="list-group-item list-group-item-action active">Click a question to toggle it's status (aka UPDATE)</a>
     <a href="#" class="list-group-item list-group-item-action active">How many glasses of water did you drink today?</a>
     <a href="#" class="list-group-item list-group-item-action">How did you get to work today?</a>
@@ -23,4 +42,4 @@
     <a href="#" class="list-group-item list-group-item-action">How long did you meditate today?</a>
     <a href="#" class="list-group-item list-group-item-action disabled">Did you visit a new place today? (disabled)</a>
   </div>
-</div>
+</div> -->
