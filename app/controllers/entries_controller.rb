@@ -5,8 +5,7 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find(params[:id])
-    @user = current_user
-    authorize @user
+    authorize @entry
   end
 
   def new
