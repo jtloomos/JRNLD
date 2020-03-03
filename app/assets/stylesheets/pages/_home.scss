@@ -7,6 +7,7 @@
   flex-direction: column;
   background-color: $primary-color;
   height: 100vh;
+  width: 100%;
   background-image: url(background.png);
   background-repeat: repeat;
 }
@@ -33,4 +34,96 @@
 
 .banner .btn-ghost {
   margin: 32px 0px;
+}
+
+.information {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  height: 60vh;
+}
+
+.video-card {
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  width: 70%;
+  height: 90%;
+  margin: auto;
+}
+
+
+.features-section {
+  background-color: white;
+}
+
+.features-container-header {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 16px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+}
+
+.feature-card {
+  background-color: white;
+  opacity: 0.8;
+  border: 1px solid $secondary-color;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 2px 2px 2px $secondary-color;
+  height: 100%;
+  align-content: flex-start;
+}
+
+.feature-card .feature-description {
+  height: 30%;
+  padding: 16px;
+}
+
+.feature-card .feature-title {
+  padding: 16px;
+  height: 20%;
+}
+
+figure {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: $secondary-color;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figure .fas {
+  font-size: 50px;
 }

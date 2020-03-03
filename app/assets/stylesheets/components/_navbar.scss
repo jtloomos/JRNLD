@@ -1,18 +1,16 @@
 .navbar-lewagon {
   display: flex;
   background: white;
-  align-items: center
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo-container {
   display: flex;
-  width: 80%;
-  margin-left: 10%;
-}
-
-.dropdown-container {
-  padding-top: 4px;
-  padding-right: 16px;
+  width: 70%;
+  margin-left: 15%;
 }
 
 .navbar-lewagon .navbar-brand {
@@ -28,6 +26,8 @@
 
 .navbar-lewagon #navbarDropdown {
   border: none;
+  background-color: white;
+  padding-right: 20px;
 }
 
 .navbar-lewagon .dropDown-icon {
